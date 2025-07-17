@@ -1,0 +1,964 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Particles Background */
+.particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+section {
+  position: relative;
+}
+
+section .container {
+  position: relative;
+  z-index: 2;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Butcherman&family=Eater&family=Chela+One&display=swap');
+
+body {
+  font-family: 'Chela One', cursive;
+  background-color: #000000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  padding: 60px 0;
+  position: relative;
+}
+
+/* Header Styles */
+.header {
+  padding: 30px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #4a4a4a, #6a6a6a, #5a5a5a);
+  border-bottom: 3px solid #333;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: headerShine 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes headerShine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Chela One', cursive;
+  transform: skew(-3deg);
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-family: 'Chela One', cursive;
+  letter-spacing: 3px;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 60px;
+  line-height: 60px;
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.running-text {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: max-content;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffd93d, #ff6b6b);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideText 8s linear infinite, colorShift 4s ease-in-out infinite;
+  transform: skew(-2deg);
+  font-size: 1.8rem;
+  font-family: 'Chela One', cursive;
+  letter-spacing: 3px;
+  font-weight: bold;
+  line-height: 60px;
+  white-space: nowrap;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5));
+}
+
+@keyframes slideText {
+  0% {
+    left: 100%;
+    opacity: 0;
+    transform: skew(-2deg) scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    transform: skew(-2deg) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: skew(-2deg) scale(1);
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+    transform: skew(-2deg) scale(0.9);
+  }
+}
+
+@keyframes colorShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.subtitle:hover .running-text {
+  animation-duration: 4s;
+  filter: drop-shadow(0 0 20px rgba(255, 217, 61, 0.8));
+  transform: skew(-2deg) scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  padding: 50px 0;
+  background-color: #333;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cat-character {
+  flex-shrink: 0;
+}
+
+.cat-face {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.cat-head {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto 0;
+  border: 3px solid #000;
+}
+
+.cat-ears {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.ear {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: 5px;
+}
+
+.ear.left {
+  left: 15px;
+  transform: rotate(-30deg);
+}
+
+.ear.right {
+  right: 15px;
+  transform: rotate(30deg);
+}
+
+.cat-eyes {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px 0;
+}
+
+.eye {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.cat-nose {
+  width: 6px;
+  height: 6px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  margin: 8px auto;
+}
+
+.cat-mouth {
+  width: 20px;
+  height: 10px;
+  border: 2px solid #000;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  margin: 5px auto;
+  background: transparent;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+  transform: skew(-5deg);
+  font-style: italic;
+  font-family: 'Chela One', cursive;
+  letter-spacing: 0.5px;
+}
+
+/* Token Info Section */
+.token-info {
+  padding: 50px 0;
+  background-color: #000;
+}
+
+.token-card {
+  position: relative;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 30px;
+  transform: rotate(-2deg);
+}
+
+.tape {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background-color: #333;
+  transform: rotate(45deg);
+}
+
+.tape-left {
+  top: -15px;
+  left: -20px;
+}
+
+.tape-right {
+  bottom: -15px;
+  right: -20px;
+  transform: rotate(-45deg);
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: 'Chela One', cursive;
+  transform: skew(-3deg);
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.contract-address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.address-text {
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.copy-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Chela One', cursive;
+  transform: skew(-5deg);
+}
+
+.copy-btn:hover {
+  background-color: #555;
+}
+
+.ca-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Chela One', cursive;
+  transform: skew(-2deg);
+  letter-spacing: 1px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.social-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+  font-family: 'Chela One', cursive;
+  font-size: 1rem;
+  transform: skew(-3deg);
+  letter-spacing: 1px;
+}
+
+.social-btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.buy-section {
+  margin-top: 30px;
+}
+
+.buy-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 50px;
+  border-radius: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: 'Chela One', cursive;
+  text-transform: uppercase;
+  transform: skew(-3deg);
+  letter-spacing: 2px;
+}
+
+.buy-btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+/* Friends Section */
+.friends-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.friends-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.moon-title {
+  font-size: 2.5rem;
+  margin: 40px 0;
+  background: #4a4a4a;
+  color: #fff;
+  padding: 20px 0;
+  font-family: 'Chela One', cursive;
+  letter-spacing: 1px;
+  display: block;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.moon-title span {
+  display: inline-block;
+  animation: runningText 15s linear infinite;
+}
+
+@keyframes runningText {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.grid-img {
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid-img:hover {
+  transform: scale(1.05);
+}
+
+.gem-section {
+  margin: 40px 0;
+}
+
+.multiplier {
+  font-size: 3rem;
+  color: #ff6b6b;
+  margin: 20px 0;
+}
+
+.fly-moon {
+  font-size: 2.5rem;
+  margin: 40px 0;
+  color: #ff6b6b;
+}
+
+/* About Section */
+.about-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  max-width: 300px;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Trends Section with Black Background */
+.about-section {
+  background: #000;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.trends-title {
+  font-size: 2.5rem;
+  margin: 40px 0 30px;
+  text-align: center;
+  font-family: 'Chela One', cursive;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.trends-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  background: #fff;
+  color: #000;
+  padding: 12px 15px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrow-img {
+  width: 30px;
+  filter: invert(1);
+}
+
+.coordination-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Chela One', cursive;
+  color: #000;
+}
+
+.trends-description {
+  max-width: 800px;
+  margin: 40px auto;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #fff;
+  font-family: 'Chela One', cursive;
+}
+
+.trend-img {
+  max-width: 400px;
+  margin: 40px auto;
+  display: block;
+}
+
+/* Roadmap Section */
+.roadmap-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.roadmap-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.roadmap-img {
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* CEX Listings Section */
+.cex-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cex-subtitle {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.exchange-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.exchange-logo {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.exchange-logo:hover {
+  transform: scale(1.1);
+}
+
+.cex-note {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 30px auto;
+  line-height: 1.8;
+}
+
+/* Token Economics Section */
+.tokenomics-section {
+  background: #000;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.tokenomics-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: 'Chela One', cursive;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tokenomics-box {
+  background: #f5f5f5;
+  color: #000;
+  padding: 20px 0;
+  margin: 30px 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.tokenomics-subtitle {
+  font-size: 1.4rem;
+  margin: 0;
+  font-family: 'Chela One', cursive;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.tokenomics-description {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 30px auto 40px;
+  line-height: 1.8;
+  color: #fff;
+  font-family: 'Chela One', cursive;
+}
+
+.highlight-red {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.tokenomics-visual {
+  margin-top: 40px;
+}
+
+.tokenomics-img {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #4a4a4a;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: 'Chela One', cursive;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-description {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+  color: #fff;
+  font-family: 'Chela One', cursive;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.contact-link {
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-link:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.twitter-link {
+  background: rgba(29, 161, 242, 0.2);
+}
+
+.twitter-link:hover {
+  background: rgba(29, 161, 242, 0.4);
+  box-shadow: 0 0 20px rgba(29, 161, 242, 0.5);
+}
+
+.telegram-link {
+  background: rgba(0, 136, 204, 0.2);
+}
+
+.telegram-link:hover {
+  background: rgba(0, 136, 204, 0.4);
+  box-shadow: 0 0 20px rgba(0, 136, 204, 0.5);
+}
+
+/* Legal Section */
+.legal-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.legal-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.legal-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.legal-img {
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Final Section */
+.final-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.final-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.donate-section {
+  margin: 40px 0;
+}
+
+.msg-img {
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+.final-text {
+  font-size: 1.5rem;
+  margin: 30px 0;
+}
+
+.final-logo {
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+    min-height: 100px;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 2px;
+  }
+
+  .running-text {
+    font-size: 1.4rem;
+    line-height: 50px;
+    letter-spacing: 2px;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cat-character {
+    align-self: center;
+  }
+
+  .token-card {
+    margin: 0 20px 30px;
+    padding: 20px;
+  }
+
+  .contract-address {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .social-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .moon-title,
+  .fly-moon {
+    font-size: 2rem;
+  }
+
+  .multiplier {
+    font-size: 2.5rem;
+  }
+}
+
+/* Floating particles effect */
+.floating-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,56 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3436;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#636e72;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0984e3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect x="0" y="0" width="600" height="250" fill="url(#skyGradient)" />
+  
+  <!-- Moon -->
+  <circle cx="500" cy="80" r="40" fill="#dfe6e9" />
+  <circle cx="485" cy="70" r="8" fill="#b2bec3" opacity="0.5" />
+  <circle cx="510" cy="85" r="6" fill="#b2bec3" opacity="0.5" />
+  <circle cx="505" cy="95" r="10" fill="#b2bec3" opacity="0.5" />
+  
+  <!-- Stars -->
+  <polygon points="100,50 102,56 108,56 103,60 105,66 100,62 95,66 97,60 92,56 98,56" fill="#fff" />
+  <polygon points="200,30 202,36 208,36 203,40 205,46 200,42 195,46 197,40 192,36 198,36" fill="#fff" />
+  <polygon points="350,60 352,66 358,66 353,70 355,76 350,72 345,76 347,70 342,66 348,66" fill="#fff" />
+  <polygon points="450,40 452,46 458,46 453,50 455,56 450,52 445,56 447,50 442,46 448,46" fill="#fff" />
+  
+  <!-- Road -->
+  <polygon points="0,250 600,250 500,400 100,400" fill="url(#roadGradient)" />
+  
+  <!-- Road lines -->
+  <rect x="290" y="280" width="20" height="40" fill="#fff" />
+  <rect x="290" y="340" width="20" height="40" fill="#fff" />
+  
+  <!-- Rocket -->
+  <ellipse cx="300" cy="200" rx="15" ry="40" fill="#e17055" />
+  <polygon points="300,160 285,180 315,180" fill="#d63031" />
+  <circle cx="295" cy="190" r="3" fill="#fff" />
+  <circle cx="305" cy="190" r="3" fill="#fff" />
+  <circle cx="300" cy="200" r="3" fill="#fff" />
+  
+  <!-- Rocket flames -->
+  <polygon points="285,240 300,220 315,240 300,260" fill="#fd79a8" />
+  <polygon points="290,245 300,230 310,245 300,255" fill="#ffd93d" />
+  
+  <!-- Cat in rocket -->
+  <circle cx="300" cy="185" r="8" fill="#ff6b6b" />
+  <polygon points="295,180 300,175 305,180" fill="#ff6b6b" />
+  <polygon points="295,180 300,175 305,180" fill="#ff6b6b" />
+  <circle cx="297" cy="183" r="1" fill="#000" />
+  <circle cx="303" cy="183" r="1" fill="#000" />
+  
+  <!-- Text -->
+  <text x="300" y="350" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="24" fill="#fff">ROADMAP TO THE MOON</text>
+  <text x="300" y="380" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="16" fill="#ddd">🚀 Coordination Cat Journey 🌙</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="catGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd93d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cat sitting -->
+  <ellipse cx="150" cy="200" rx="60" ry="80" fill="url(#catGradient2)" />
+  
+  <!-- Cat head -->
+  <circle cx="150" cy="100" r="45" fill="url(#catGradient2)" />
+  
+  <!-- Cat ears -->
+  <polygon points="120,65 130,85 110,85" fill="url(#catGradient2)" />
+  <polygon points="180,65 190,85 170,85" fill="url(#catGradient2)" />
+  
+  <!-- Cat eyes (sleepy) -->
+  <path d="M 130 95 Q 140 105 150 95" stroke="#000" stroke-width="3" fill="none" />
+  <path d="M 150 95 Q 160 105 170 95" stroke="#000" stroke-width="3" fill="none" />
+  
+  <!-- Cat nose -->
+  <polygon points="150,110 145,120 155,120" fill="#ff69b4" />
+  
+  <!-- Cat mouth (happy) -->
+  <path d="M 150 120 Q 140 130 130 125" stroke="#000" stroke-width="2" fill="none" />
+  <path d="M 150 120 Q 160 130 170 125" stroke="#000" stroke-width="2" fill="none" />
+  
+  <!-- Cat whiskers -->
+  <line x1="105" y1="105" x2="125" y2="110" stroke="#000" stroke-width="2" />
+  <line x1="105" y1="115" x2="125" y2="115" stroke="#000" stroke-width="2" />
+  <line x1="175" y1="110" x2="195" y2="105" stroke="#000" stroke-width="2" />
+  <line x1="175" y1="115" x2="195" y2="115" stroke="#000" stroke-width="2" />
+  
+  <!-- Cat front paws -->
+  <circle cx="130" cy="250" r="12" fill="url(#catGradient2)" />
+  <circle cx="170" cy="250" r="12" fill="url(#catGradient2)" />
+  
+  <!-- Cat tail (curled) -->
+  <path d="M 210 200 Q 230 180 220 160 Q 210 140 190 150" stroke="url(#catGradient2)" stroke-width="12" fill="none" />
+</svg>
